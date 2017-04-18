@@ -40,6 +40,9 @@ var Skiss = React.createClass({
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
       float: 'left',
+      position: 'absolute',
+      bottom: '10%',
+      right: '45%',
     };
 
     return (

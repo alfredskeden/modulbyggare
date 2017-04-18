@@ -4,6 +4,7 @@ var Header = require('./components/Header.react');
 var SerieContainer = require('./containers/SerieContainer.react');
 var ModulContainer = require('./containers/ModulContainer.react')
 var SkissContainer = require('./containers/SkissContainer.react')
+var PadeoContainer = require('./containers/PadeoContainer.react')
 var ButtonToTrademax = require('./components/ButtonToTrademax.react')
 var loadJSON = require('./info.json');
 var loadJSON2 = require('./components.json')
@@ -94,6 +95,7 @@ var Application = React.createClass({
           selectedSerie={this.state.selectedSerie}
           addSkissArtno={this.addSkissArtno}/>
         </div>
+        <PadeoContainer />
         <SkissContainer
           serieInfo={this.state.serieInfo}
           selectedSerie={this.state.selectedSerie}
