@@ -15,14 +15,8 @@ var PadeoContainer = React.createClass({
     },
     handleInputHeightChange: function(evt) {
 
-      var temp = evt.target.value;
-      console.log(temp + " " + evt.target.value);
-      if(temp > 1000){
-        temp = 1000;
-      }
-
       this.setState({
-        heightInput: temp
+        heightInput: evt.target.value
       })
     },
 

@@ -32,7 +32,7 @@ function Padeo (props) {
 
   return (
     <div>
-    <div style={{marginLeft: "27px", position: "absolute", top: "280px" }}>
+    <div style={{marginLeft: "27px", position: "absolute", top: "320px", }}>
     <h3 style={Styles} >Mått på din uteplats:</h3>
     <input type="number"
       onChange={props.onHandleInputWidthChange}
@@ -56,7 +56,8 @@ function Padeo (props) {
           marginTop: "10px",
           backgroundRepeat: "repeat",
           backgroundImage: "url(" + trallImage +")",
-          float: "center",
+          position: "absolute",
+          top: "520px",
         }}
         >
         <img src={trallImage} style={{visibility: "hidden", width: widthPadeo, height: heightPadeo,}}  />
