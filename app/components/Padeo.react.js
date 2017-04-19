@@ -8,6 +8,7 @@ var Styles = {
 var StylesInput = {
   marginBottom: '5px',
   fontFamily: 'Lato,sans-serif',
+  width: "100px",
 };
 
 var widthPadeo = 0;
@@ -19,30 +20,40 @@ function Padeo (props) {
     widthPadeo = props.widthInput*2;
   }
   else {
-    widthPadeo = 30*2;
+    widthPadeo = 90*2;
   }
 
   if(props.heightInput != "" && props.heightInput > 30 && props.heightInput <= 1000){
     heightPadeo = props.heightInput*2;
   }
   else {
-    heightPadeo = 30*2;
+    heightPadeo = 90*2;
   }
 
   return (
     <div>
-    <span style={Styles} >Här kan du skriva mått på din uteplats:</span>
+    <div style={{marginLeft: "27px", position: "absolute", top: "280px" }}>
+    <h3 style={Styles} >Mått på din uteplats:</h3>
+    <input type="number"
+      onChange={props.onHandleInputWidthChange}
+      value={props.widthInput}
+      name="Width"
+      style={StylesInput}
+      placeholder="Bredd"/> <span>cm</span>
     <br />
-
-    <input type="number" onChange={props.onHandleInputWidthChange} value={props.widthInput} name="Width" style={StylesInput} placeholder="Bredd cm"/>
-    <br />
-    <input type="number" onChange={props.onHandleInputHeightChange} value={props.heigthInput} name="height" style={StylesInput} placeholder="Höjd cm" />
-
+    <input type="number"
+      onChange={props.onHandleInputHeightChange}
+      value={props.heigthInput}
+      name="height"
+      style={StylesInput}
+      placeholder="Höjd" /> <span>cm</span>
+    </div>
 
       <div src={trallImage}
         style={{width: widthPadeo,
           height: heightPadeo,
-          marginLeft: "40px",
+          marginLeft: "27px",
+          marginTop: "10px",
           backgroundRepeat: "repeat",
           backgroundImage: "url(" + trallImage +")",
           float: "center",
@@ -50,8 +61,7 @@ function Padeo (props) {
         >
         <img src={trallImage} style={{visibility: "hidden", width: widthPadeo, height: heightPadeo,}}  />
     </div>
-      </div>
-
+</div>
 );
 }
 

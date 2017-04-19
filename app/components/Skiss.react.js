@@ -41,15 +41,15 @@ var Skiss = React.createClass({
       backgroundRepeat: 'no-repeat',
       float: 'left',
       position: 'absolute',
-      bottom: '10%',
-      right: '45%',
+      top: "430px",
+      left: "400px",
     };
 
     return (
       <Draggable grid={[2, 2]} >
         <div style={image}>
           <img src={rotateImage} onClick={this.rotateImage} style={transformStyle} />
-          <img src={trashcanImage} onClick={this.rotateImage} style={transformStyle} />
+          <img src={trashcanImage} onClick={this.removeImage} style={transformStyle} />
           <br />
           <img src={path} style={{visibility: "hidden"}}  />
         </div>

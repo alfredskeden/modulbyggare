@@ -21,9 +21,9 @@ var SkissContainer = React.createClass({
         } else {
             return (
                 <div style={{
-                    textAlign: "center"
+                    textAlign: "center", position: "absolute", top: "430px", left: "400px",
                 }}>
-                    <h1>Klicka på någon av modulerna för att börja bygga!</h1>
+                    <h3>Klicka på någon av modulerna<br /> för att börja bygga!</h3>
                 </div>
             )
         }

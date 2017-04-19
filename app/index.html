@@ -27,10 +27,23 @@
       padding: 3px 5px;
       text-align: center;
     }
+    #mobil {
+      display: none;
+      text-align: center;
+    }
+    @media (max-width: 1000px){
+      #app {
+        display: none;
+      }
+      #mobil{
+        display: inline;
+      }
+    }
   </style>
 
 </head>
 <body>
   <div id="app"></div>
+  <div id="mobil">Ser ut som att du är på mobil. Tyävrr stöds det ej för tillfället</div>
 </body>
 </html>

@@ -1,6 +1,5 @@
 var React = require('react');
 var Padeo = require('../components/Padeo.react');
-var padeoDraw = require('../components/padeoDraw.react');
 
 var PadeoContainer = React.createClass({
   getInitialState: function (){
@@ -15,8 +14,15 @@ var PadeoContainer = React.createClass({
       })
     },
     handleInputHeightChange: function(evt) {
+
+      var temp = evt.target.value;
+      console.log(temp + " " + evt.target.value);
+      if(temp > 1000){
+        temp = 1000;
+      }
+
       this.setState({
-        heightInput: evt.target.value
+        heightInput: temp
       })
     },
 
@@ -28,8 +34,6 @@ var PadeoContainer = React.createClass({
           widthInput={this.state.widthInput}
           heightInput={this.state.heightInput}
            />
-         
-           <padeoDraw />
          </div>
      );
     }

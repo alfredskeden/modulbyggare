@@ -69,33 +69,26 @@ var Application = React.createClass({
       return "inget_fanns";
   },
   handleRemoveImageFromArray: function (index){
-    console.log(this.state.skissArray + " " + index);
-
-    var indexof = this.state.skissArray.indexOf(index);
-
     this.setState({
-      skissArray: this.state.skissArray.splice(indexof, 1),
-    })
-    console.log(this.state.skissArray);
+    skissArray: this.state.skissArray.filter((_, i) => i !== index)
+  });
   },
   render: function () {
 
     return (
-      <div className="container-fluid">
+      <div>
         <Header />
-        <div className="row">
+        <div>
         <SerieContainer
           serieInfo={this.state.serieInfo}
           selectedSerie={this.state.selectedSerie}
           onChangeSerie={this.handleChangeSerie} />
-      </div>
-      <div className="row">
-        <ModulContainer
-          serieInfo={this.state.serieInfo}
-          selectedSerie={this.state.selectedSerie}
-          addSkissArtno={this.addSkissArtno}/>
+          <ModulContainer
+            serieInfo={this.state.serieInfo}
+            selectedSerie={this.state.selectedSerie}
+            addSkissArtno={this.addSkissArtno} />
+          <PadeoContainer />
         </div>
-        <PadeoContainer />
         <SkissContainer
           serieInfo={this.state.serieInfo}
           selectedSerie={this.state.selectedSerie}
