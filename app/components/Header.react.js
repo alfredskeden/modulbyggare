@@ -10,7 +10,7 @@ var Styles = {
 };
 
 function Header (props){
-  return <h1 style={Styles}>Trademax Modulbyggare v0.6!</h1>;
+  return <h1 style={Styles}>Trademax Modulbyggare v0.7!</h1>;
 }
 
 module.exports = Header;
